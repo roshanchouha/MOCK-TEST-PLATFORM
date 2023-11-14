@@ -1,0 +1,475 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,300;0,400;1,400&family=Roboto:wght@300;400;500&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   background: transparent;
+   font-family: 'Roboto', sans-serif;
+
+ }
+ 
+ 
+ .Instruction{
+   margin-top: 2rem;
+   margin-left: 20rem;
+ }
+
+ /* input[type=radio]:checked ~ .check{
+   border: 5px solid rgb(133, 241, 197);
+ } */
+ input[type=radio]:checked ~ .check::before{
+  background: rgb(133, 241, 197);
+}
+input[type=radio]:checked ~ .Primary{
+  color: green;
+}
+
+.checked{
+  border: 5px solid rgb(133, 241, 197);
+
+}
+.checked::before{
+  background: rgb(133, 241, 197);
+}
+.Restart-btn{
+   margin:  1rem 0;
+   margin-left: 13rem;
+}
+
+#Card-Container{
+   
+ 
+  width: 90vw;
+  margin: auto;
+  margin-top: 5rem;
+  height: 30vw;
+  
+}
+.Cards{
+  display: grid;
+  grid-template-columns: 20rem 20rem 20rem 20rem;
+  padding: 0 2.5rem;
+}
+.Paper{
+    width: 18rem;
+}
+.container1{
+  border-radius: 1rem;
+  height: 60vh;
+  background-color: #eee;
+  display: flex;
+  justify-content:center;
+  align-items: end;
+}
+.container2{
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-left: -12rem;
+}
+.container3{
+  display: flex;
+  gap: 2rem;
+}
+.container4{
+   margin-left:15%; 
+  
+}
+.image{
+  width: 70%;
+  height: 85%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+.buttonbox{
+   border-radius: 0.5rem;
+  background: #4E606d;
+  color: white;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.Question{
+  color: #797a7c;
+  margin-top: -0.5rem;
+  font-size: 14px;
+}
+.button{
+  
+  border: 1px solid black ;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+.button:hover{
+  background: red;
+  color: white !important;
+  border: none;
+}
+#quizContainer{
+    margin:  0 7rem;
+    margin-top:10rem;
+    
+
+}
+#quizContainer .Container1{
+    width: 100%;
+    height: 23rem !important;
+    background: #eee;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 10px;
+}
+#quizContainer .Container1 .part1{
+  background: white;
+  width: 75%;
+  height: 95%;
+}
+#quizContainer .Container1 .part1A{
+ 
+  height: 80%;
+  border: 1px solid black;
+}
+#quizContainer .Container1 .part1B{
+ 
+ height: 20%;
+ background: rgb(0, 124, 128);
+}
+#quizContainer .Container1 .part2{
+  background: white;
+  border: 1px solid black;
+  width: 25%;
+  height: 95%;
+}
+
+.whiteButton{
+  border: 1px solid blue;
+  border-radius: 0.5rem;
+  padding:0.5rem 2rem;
+  color:  white;
+  background: rgb(12, 12, 66);
+}
+.whiteButton:hover{
+  border:1px solid black;
+   background: white;
+   color:black
+}
+.checkbox{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem ;
+  padding: 1rem;
+  cursor: pointer;
+  
+}
+.count{
+  border: 1px solid ;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1;
+  text-align: center;
+  background: #eee;
+  border-radius: 0.5rem;
+}
+.fill{
+   background: green;
+   color: white;
+}
+.unfill{
+  background: #eee;
+  color: black;
+  cursor: no-drop;
+}
+.notAnswer{
+    background: red;
+    color: white;
+}
+.heading{
+  margin-left: -2rem;
+}
+.container5{
+    
+  
+  height: 100vh;
+}
+.article{
+  
+  display: flex;
+  width: 100%;
+  height: 85%;
+}
+.section{
+  width: 80%;
+ 
+}
+.sidebar{
+  width: 20%;
+  background: #d9edf7;
+}
+.sectionHeading{
+   
+   margin-top: 2.5rem;
+   padding: 0.3rem 1rem; 
+   background: #f5f5f5;
+  
+}
+.footer{
+  margin-top: -1.5rem;
+  margin-right: 2rem;
+  
+}
+.dropName{
+  font-size: 10px !important;
+  color: black !important;
+  border-radius: 0.2rem;
+  padding: 0.1rem 1rem;
+  border: 2px solid;
+  text-transform: capitalize;
+  font-weight: bold;
+
+}
+.plus{
+  width: 40px;
+  height: 20px;
+  font-size: 13px !important;
+   background:rgb(181, 248, 181);
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 2rem;
+   padding: 0 0.5rem;
+  
+}
+.minus{
+  width: 40px;
+  height: 20px;
+  font-size: 13px !important;
+   background: red;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 2rem;
+   padding: 0 0.5rem;
+}
+.marks{
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+}
+.part1{
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.part2{
+  height: 50%;
+  
+   overflow:auto;
+   background: #A6DCF7;
+   margin: 0 1ppx;
+}
+.part3{
+  height: 25%;
+ 
+   padding: 1rem;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+  
+   
+}
+.count1{
+  border: 1px solid ;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1;
+  text-align: center;
+  background: green;
+  border-radius: 0.5rem;
+}
+.count2{
+  border: 1px solid ;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1;
+  text-align: center;
+  background: rgb(241, 81, 81);
+  border-radius: 0.5rem;
+}
+.count3{
+  border: 1px solid ;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1;
+  text-align: center;
+  background: #eee;
+  border-radius: 0.5rem;
+}
+.tag1{
+    font-size: 14px !important;
+}
+.resultContainer{
+    
+    height: 100vh;
+}
+.rank{
+   
+   height: 8rem !important;
+   margin-top: 4rem;
+   display: flex;
+   justify-content: left;
+   align-items: center;
+   padding: 2rem;
+}
+.performance{
+ 
+  height: 10rem;
+  margin-top: 4rem;
+  
+}
+.rankCard{
+    width: 20rem;
+    height: 5rem;
+    
+}
+.perFormanceCard{
+  width: 10rem;
+  height: 4rem;
+}
+.lightText{
+  margin-top: -5px;
+}
+.RestartBtn{
+  margin-top: 2rem;
+  margin-left: 25rem;
+}
+.banner{
+ 
+  height: 15rem;
+  /* background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,24,121,1) 35%, rgba(0,212,255,1) 100%); */
+  background: #eeee;
+}
+.bannerText{
+  color: black;
+  width: 50rem;
+  padding: 2rem 3rem;
+}
+.popularMockTest{
+  height: 90vh;
+}
+.box{
+  width: 200px;
+  height:150px;
+  background: #eee;
+}
+ 
+.category{
+ 
+  display: grid;
+  height: 35rem;
+  grid-template-columns: repeat(6,1fr);
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 2rem;
+  padding: 2rem 3rem;
+  overflow: auto;
+ 
+ 
+}
+.image{
+  margin-top: 10px;
+  width: 6rem;
+  color: rgb(30, 33, 122);
+}
+.head{
+  color: rgb(30, 33, 122);
+}
+.insPart1{
+   
+   width: 80%;
+   height: 100%;
+   overflow: auto;
+}
+.insPart2{
+ 
+   width: 20%;
+   height: 100%;
+   background: #d9edf7;
+}
+.insBox{
+  display: flex;
+  width: 100%;
+  height: 44rem !important;
+}
+.insPart21{
+ 
+  width: 100%;
+  height: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* .insPart22{
+  border: 1px solid black;
+  width: 100%;
+  height: 33%;
+}
+.insPart23{
+  border: 1px solid black;
+  width: 100%;
+  height: 33%;
+} */
+
+.instruction{
+ line-height: 33px;
+ 
+}
+.line-container {
+  position: relative;
+  margin-top: 10px;
+}
+
+.line {
+  width: 100%;
+  border-top: 2px solid #000; /* You can change the color here */
+}
+
+.text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white; /* You can change the background color here */
+  padding: 0 10px;
+}
+ 
