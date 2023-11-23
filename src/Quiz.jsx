@@ -8,21 +8,29 @@ import Paper from "@mui/material/Paper";
 import PositionedMenu from "./components/DropDown";
 import { moveAtPosition } from "./Redux/question_reducer";
 import { maintainResult } from "./Redux/result_reducer";
-var checkValue
+ 
+import CountdownTimer from "./components/Timer";
+ 
 export default function Quiz() 
 {
-   
+  // let [timer,setTimer]=useState(300)
   let [countInc,setcountInc]=useState(0)
   let [countDec,setcountDec]=useState(0)
   const result = useSelector((state) => state.result.result);
   const name =  useSelector((state) => state.result.userID);
   const head = useSelector((state) => state.quizname.topicName);
   // const traceArr = useSelector((state)=>state.result.maintainChecked[0].checked)
-  const checkArr = useSelector((state)=>state.result.result)
+  const queue1 = useSelector((state)=>state.question)
+   
   
 
   const [checked, setchecked] = useState(-1);
   const { queue, trace } = useSelector((state) => state.question);
+   
+  const timer =  queue.length*10;
+ 
+   
+ 
   const state = useSelector((state) => state.question.queue);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -31,8 +39,10 @@ export default function Quiz()
     // console.log(result[trace-1]);
     // console.log(trace-1);
     //  console.log(queue.length)
-    console.log(checkArr)
+     
+     
   });
+ 
   const onPrev = () => {
     if (trace > 0) {
       dispatch(movePrevQuestion());
@@ -84,10 +94,10 @@ export default function Quiz()
  
 
   return (
-    <div className="container-fluid min-vh-100">
+    <div className="container-fluid min-vh-100 scrollbar" id="scrollbar1">
       <div className="container5">
-        <div>
-          <h1>heading</h1>
+        <div className="mt-2" >
+           <img src="./image/logo3.png" width="140px" alt="" />
         </div>
         <div>
           <hr />
@@ -124,10 +134,10 @@ export default function Quiz()
           <div className="sidebar">
             <div className="part1 ">
               <div className="fw-bold">{name}</div>
-              <div className="btn btn-primary my-3">Time Left: 00:00:00</div>
+              <div className="btn btn-primary my-3">Time Left: <span><CountdownTimer initialSeconds={queue.length*60} /></span> </div>
             </div>
-            <div className="part2 ">
-              <div className="checkbox">
+            <div className="part2 scrollbar" id="scrollbar1">
+              <div className="checkbox  "  >
                 {state.map((val, index) => (
                   <div onClick={()=>onPostion(index)}
                        
@@ -226,7 +236,7 @@ export default function Quiz()
                         </thead>
                         <tbody>
                           <tr>
-                            <th scope="row">React-Basic</th>
+                            <th scope="row">{head}</th>
                             <td>{queue.length}</td>
                             <td>{countInc}</td>
                             <td>{countDec}</td>

@@ -68,10 +68,12 @@ export default function Result() {
             <div className='performance'>
             <div className='p-2 fw-bold text-primary'>My Overall performance summary</div>
                   <div className='d-flex justify-content-left align-items-center gap-4 p-4'>
-                   <ResultSummary img={"image/top-three.png"} score={ `${earnPoint}/${TotalPoints}`} name={'Score'}/>
-                   <ResultSummary  img={"image/clock.png"} score={ `N/A`} name={'Time Taken'}/>
+                   
+                   <ResultSummary  img={"image/QA.png"} score={queue.length} name={'Questions'}/>
                    <ResultSummary  img={"image/checklist.png"} score={ `${attempts}/${queue.length}`} name={'Attempted'}/>
-                   <ResultSummary  img={"image/checkmark.png"} score={ `${correct.length}/${queue.length}`} name={'Correct'}/>
+                   <ResultSummary  img={"image/checkmark.png"} score={ `${correct.length}/${attempts}`} name={'Correct'}/>
+                   <ResultSummary  img={"image/wrong.png"} score={ `${attempts-correct.length}/${attempts}`} name={'Wrong'}/>
+                   <ResultSummary img={"image/score.png"} score={ `${earnPoint}/${TotalPoints}`} name={'Score'}/>
                    <ResultSummary  img={"image/aim.png"} result={flag?'Passed':'Failed'} name={'Result'}/>
                   </div>
             </div> 

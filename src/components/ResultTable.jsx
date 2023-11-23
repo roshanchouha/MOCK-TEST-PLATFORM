@@ -13,7 +13,7 @@ const ResultTable = () => {
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">Rank</th>
             <th scope="col">Name</th>
             <th scope="col">Attempts</th>
             <th scope="col">Earn Point</th>
@@ -26,7 +26,7 @@ const ResultTable = () => {
           ) : (
             getData.map((val, index) => (
               <tr>
-                <th scope="row">{index}</th>
+                <th scope="row">{index+1}</th>
                 <td>{val.username}</td>
                 <td>{val.attempts}</td>
                 <td>{val.points}</td>

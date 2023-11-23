@@ -6,7 +6,8 @@ export const QuizQuestion= createSlice({
     initialState:{
         
         Quiz:null,
-        topicName:null
+        topicName:null,
+        timer:30*60
     },
     reducers:{
         setQuizName:(state,action)=>

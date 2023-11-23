@@ -11,7 +11,7 @@ import DialogContent from '@mui/material/DialogContent'
 import DialogContentText from '@mui/material/DialogContentText'
 import DialogTitle from '@mui/material/DialogTitle'
 import { setQuizName, settopicName } from './Redux/Quizname'
-import FirstLook from './components/firstLook'
+import FirstLook from './components/FirstLook'
 
 export default function() 
 {

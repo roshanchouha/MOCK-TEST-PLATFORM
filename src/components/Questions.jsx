@@ -21,6 +21,7 @@ const Questions = ({onChecked}) => {
   },[checked])
 
   const onSelect = (index) => {
+    
     onChecked(index);
      setchecked(index);
      dispatch(updateAnswer({trace,checked}))
@@ -40,18 +41,21 @@ const Questions = ({onChecked}) => {
             <input
             
               type="radio"
-              value={false}
+              value={true}
               id={`q1${index}-qutionid`}
               name="options"
+              // checked={ result[trace] == index}
               onChange={()=>onSelect(index)}
+              style={result[trace] == index? {display:'none'}:{} }
             />
-            <label className="Primary py-3" htmlFor={`q1${index}-qutionid`}>
+            
+            <label className={` Primary py-3 check ${result[trace] == index?'checked' : '' }`} htmlFor={`q1${index}-qutionid`}>
                {val}
             </label>
-            <div className={`check ${result[trace] == index?'checked' : '' }`}></div>
+            {/* <div className={`check ${result[trace] == index?'checked' : '' }`} ></div> */}
           </li>
         )
-        )
+        ) 
         }
       </ul>
     </div>

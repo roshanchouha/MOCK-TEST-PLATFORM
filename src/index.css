@@ -26,7 +26,10 @@ input[type=radio]:checked ~ .Primary{
 }
 
 .checked{
-  border: 5px solid rgb(133, 241, 197);
+  /* border: 5px solid rgb(133, 241, 197); */
+  color: green;
+   
+  font-weight: bold;
 
 }
 .checked::before{
@@ -36,6 +39,7 @@ input[type=radio]:checked ~ .Primary{
    margin:  1rem 0;
    margin-left: 13rem;
 }
+ 
 
 #Card-Container{
    
@@ -50,6 +54,7 @@ input[type=radio]:checked ~ .Primary{
   display: grid;
   grid-template-columns: 20rem 20rem 20rem 20rem;
   padding: 0 2.5rem;
+   
 }
 .Paper{
     width: 18rem;
@@ -103,12 +108,21 @@ input[type=radio]:checked ~ .Primary{
   margin-top: -0.5rem;
   font-size: 14px;
 }
+.Question:hover{
+  color: #202069;
+  cursor: default;
+  font-weight: bold;
+}
+.button1{
+  margin-top: 1.8rem !important;
+  margin-left: 1.5rem;
+}
 .button{
-  
+    
   border: 1px solid black ;
-  padding: 0.5rem 1.5rem;
-  text-align: center;
+  padding: 0.5rem 6rem;
   border-radius: 0.3rem;
+  
 }
 .button:hover{
   background: red;
@@ -402,6 +416,7 @@ input[type=radio]:checked ~ .Primary{
   row-gap: 2rem;
   padding: 2rem 3rem;
   overflow: auto;
+  
  
  
 }
@@ -472,4 +487,111 @@ input[type=radio]:checked ~ .Primary{
   background-color: white; /* You can change the background color here */
   padding: 0 10px;
 }
+ 
+.footerPart{
+  margin-left: -5rem;
+    width:93.1rem;
+     background: #eee;
+     display: flex;
+     
+}
+.footerContainer1{
+ 
+   width: 30%;
+   padding: 3rem;
+}
+.footerContainer2{
+   padding: 2rem;
+  width: 70%;
+ 
+}
+.footerContainer21{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  color:#33334c
+}
+.FontColor{
+  color:  rgb(5, 5, 62);
+}
+.fontColor1{
+  padding: 0.5rem;
+  color:#800080
+}
+.Heading{
+  margin-top: 3.5rem;
+}
+
+.scrollbar{
+  width: 100%;
+  overflow: auto;
+  padding: 0 10px;
+}
+ 
+/*       ScrollBar 1        */
+
+#scrollbar1::-webkit-scrollbar {
+  width: 10px;
+}
+
+#scrollbar1::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+}
+
+#scrollbar1::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+  background-color:  black
+}
+
+/*        ScrollBar 2    */
+
+#scrollbar2::-webkit-scrollbar {
+  width: 20px;
+}
+
+#scrollbar2::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#scrollbar2::-webkit-scrollbar-thumb {
+  background-image: url('https://i.ibb.co/1RHr40z/248599.png'); 
+  background-repeat: no-repeat, no-repeat;
+  background-size: 20px;
+}
+
+/*        ScrollBar 3    */
+
+#scrollbar3::-webkit-scrollbar {
+  width: 20px;
+}
+
+#scrollbar3::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#scrollbar3::-webkit-scrollbar-thumb {
+  background-image: url('https://i.ibb.co/6yx2nn8/arrow.png'); 
+  background-position: center top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 50px;
+}
+/*        ScrollBar 4    */
+
+#scrollbar4::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 10px;
+}
+
+#scrollbar4::-webkit-scrollbar-track {
+  border-radius: 10px;
+  border: 1px solid #cacaca;
+  background-color: #f1f1f1;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
  
