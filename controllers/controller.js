@@ -1,5 +1,5 @@
 import dbconnect from "../Database/conn.js"
-import database, { CssAnswers, CssQuestion, HtmlAnswers, HtmlQuestion, ReactQuestion, ReactAnswers, answers, JavaScriptQuestion, JavaScriptAnswers, NodeQuestion, NodeAnswers, CppQuestion, CppAnswers, CQuestion, CAnswers, JavaAnswers, JavaQuestion, MongodbQuestion, mongodbAnswers, SqlQuestion, SqlAnswers } from "../Database/data.js"
+import database, { CssAnswers, CssQuestion, HtmlAnswers, HtmlQuestion, ReactQuestion, ReactAnswers, answers, JavaScriptQuestion, JavaScriptAnswers, NodeQuestion, NodeAnswers, CppQuestion, CppAnswers, CQuestion, CAnswers, JavaAnswers, JavaQuestion, MongodbQuestion, mongodbAnswers, SqlQuestion, SqlAnswers, DaaQuestions, DaaAnswers, DataSturctureQuestions, DataStructureAnswers, ComputerNetworkingQuestions, ComputerNetworkingAnswers, WebTechnologyAnswers, WebTechnologyQuestions, PythonQuestions, PythonAnswers, DataMiningQuestions, DataMiningAnswers, DataWarehouseQuestions, DataWarehouseAnswers, SoftwareEngineeringQuestions, SoftwareEngineeringAnswers, PhpQuestions, PhpAnswers, DBMSQuestions, DBMSAnswers, CompilerDesignQuestions, CompilerDesignAnswers, ComputerOrganizationQuestions, ComputerOrganizationAnswers, VueJsQuestions, VueJsAnswers, AngularJsQuestions, AngularJsAnswers, NextJsQuestions, NextJsAnswers } from "../Database/data.js"
 import { resultConn } from "../Database/conn.js";
 
 
@@ -30,6 +30,21 @@ export async function postQuestion(req,resp){
              {question:JavaQuestion,answers:JavaAnswers},
              {question:MongodbQuestion,answers:mongodbAnswers},
              {question:SqlQuestion,answers:SqlAnswers},
+             {question:DaaQuestions,answers:DaaAnswers},
+             {question:DataSturctureQuestions,answers:DataStructureAnswers},
+             {question:ComputerNetworkingQuestions,answers:ComputerNetworkingAnswers},
+             {question:WebTechnologyQuestions,answers:WebTechnologyAnswers},
+             {question:PythonQuestions,answers:PythonAnswers},
+             {question:DataMiningQuestions,answers:DataMiningAnswers},
+             {question:DataWarehouseQuestions,answers:DataWarehouseAnswers},
+             {question:SoftwareEngineeringQuestions,answers:SoftwareEngineeringAnswers},
+             {question:PhpQuestions,answers:PhpAnswers},
+             {question:DBMSQuestions,answers:DBMSAnswers},
+             {question:CompilerDesignQuestions,answers:CompilerDesignAnswers},
+             {question:ComputerOrganizationQuestions,answers:ComputerOrganizationAnswers},
+             {question:VueJsQuestions,answers:VueJsAnswers},
+             {question:AngularJsQuestions,answers:AngularJsAnswers},
+             {question:NextJsQuestions,answers:NextJsAnswers},
          ]);
             resp.json(data)
     } catch (error) {
@@ -38,7 +53,9 @@ export async function postQuestion(req,resp){
 }
 export async function deleteQuestion(req,resp){
     try {
-            resp.json("delete questions")
+       let data = await dbconnect();
+       data = await data.drop();
+       resp.json("delete questions")
     } catch (error) {
        console.log(error)
     }
@@ -46,7 +63,7 @@ export async function deleteQuestion(req,resp){
 export async function getResult(req,resp){
     try {
             let data = await resultConn();
-            data = await data.find({}).toArray()
+            data = await data.find({}).sort({points:-1}).toArray()
             resp.json(data)
     } catch (error) {
        console.log(error)
@@ -66,7 +83,9 @@ export async function postResult(req,resp){
 }
 export async function deleteResult(req,resp){
     try {
-            resp.json("delete result")
+         let data = await resultConn();
+         data = await data.drop();
+         resp.json(data)
     } catch (error) {
        console.log(error)
     }
