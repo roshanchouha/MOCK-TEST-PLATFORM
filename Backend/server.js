@@ -26,7 +26,7 @@ app.get('/',async(req,resp)=>{
     }
 })
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 app.listen(port,()=>{
     console.log( `server connected  to http://localhost:${port}`);
 })
